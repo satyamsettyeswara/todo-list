@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>
+            My First Node Project
+        </title>
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>        
+        <div class="container"> 
+            <h1 class="heading">TODO APP</h1>
+            <form id="myform" action="/create-task" method="POST">
+            <div class="description">
+                <label>DESCRIPTION</label>
+                <input type="text" placeholder="What do you want to do?" name="desc">
+            </div>
+            <div class="detail">
+                <div class="cate">
+                    <label >CATEGORY</label>   
+                    <select name="categ">
+                        <option value="default">choose a category</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Work">Work</option>
+                        <option value="School">School</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="due">
+                    <label >DUE DATE</label> 
+                    <input type="date" name="duedate">  
+                </div>                         
+            </div>
+            <div class="btn">
+                <a onclick="document.getElementById('myform').submit();" class="add">
+                    <p>ADD TASK</p>
+                </a>
+                <a href="/delete-task"   class="delete">                    
+                    <p>DELETE TASKS</p>
+                </a>
+            </div>
+            </form>            
+            <%for(i of tasklist ){%>
+                <div class="taskdetails">
+                    <div class="check1">
+                        <input type="checkbox" name="checkme" value="<%= i._id%>">
+                    </div>
+                    <div class="data">
+                        <label><%= i.taskname %></label>
+                        <label><%= i.taskdate %></label>
+                    </div>
+                    <div class="type">
+                        <div class="typ">
+                            <label><%= i.tasktype %></label>
+                        </div>
+                    </div>
+                </div>
+            <%}%>            
+        </div>
+        <script type="text/javascript" src="./js/home.js">
+            console.log("found");
+        </script>
+    </body>
+</html>

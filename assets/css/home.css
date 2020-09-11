@@ -1,0 +1,136 @@
+body{
+    background-color:lightgrey;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.container{
+    margin:auto;
+    width:600px;
+    height:auto;
+    background-color: white;
+    box-shadow: 0px 0px 10px 4px grey;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading{
+    margin-top:10px;
+}
+.description{
+    height:70px;
+    width:100%;
+    border-top:2px solid rgb(190, 188, 188);
+    border-bottom:2px solid rgb(165, 161, 161);
+    display: flex;
+    flex-direction: column;        
+}
+.description label {
+    padding-left:20px;
+    padding-top:5px;
+}
+.description input[type='text']{
+    margin-left:20px;
+    margin-top:10px;    
+    border:none;
+}
+input:focus{
+    outline:none;
+}
+select:focus{
+    outline:none;
+}
+.detail div{    
+    width:50%;
+    border-bottom:2px solid rgb(165, 161, 161);    
+    display: flex;
+    flex-direction: column;
+}
+.detail .cate{
+    border-right:1px solid rgb(165, 161, 161);
+    padding-right: 10px;
+}
+.detail .cate select{
+    margin-left:20px;
+    margin-top:10px;
+    border:none;
+}
+.detail .due{
+    border-left:1px solid rgb(165, 161, 161);
+    padding-right: 10px;
+}
+.detail input[type='date']{
+    margin-left:20px;
+    margin-top:10px;    
+    border:none;
+}
+.detail label {
+    padding-left:20px;
+    padding-top:5px;
+}
+.detail{
+    height:70px; 
+    width:100%;       
+    display: flex;
+    flex-direction: row;    
+}
+/* BUTTONS */
+.btn{
+    width:100%;
+    height:100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+}
+.btn a{
+    text-decoration:none;
+}
+.add{    
+    width:120px;
+    height:50px; 
+    background-color:gray;
+    color:white;
+    text-align:center;    
+    
+}
+.delete{
+    padding-left:2px;
+    width:120px;
+    height:50px; 
+    background-color:red;
+    color:white;
+    text-align:center;
+}
+/* task details */
+.taskdetails{
+    display:flex;
+    flex-direction:row;  
+    width: 100%;
+    height:70px;  
+    padding-top:10px;
+    border-top:2px solid rgb(165, 161, 161);
+}
+.taskdetails .check1{
+    width:10%;
+    padding-left:10px;
+}
+.taskdetails .data{
+    display: flex;
+    flex-direction: column;
+    width:60%
+}
+.taskdetails .type{
+    width:30%    
+}
+.taskdetails .type div{
+    width:70%;
+    height: 50%;
+    background-color: #18dc61;
+    color:white;       
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    width: 100%;  
+}
